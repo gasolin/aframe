@@ -15,7 +15,6 @@ require('document-register-element');
  functions in the base classes (`AEntity` and `ANode`) are also
  invoked. The method in the base class is always called before the
  one in the derived object.
-
 */
 var registerElement = document.registerElement;
 
@@ -112,7 +111,7 @@ function wrapAEntityMethods (obj) {
  * Wraps a list a methods to ensure that those in the base class are called through the derived one.
  * @param  {object} targetObj Object that will contain the wrapped methods
  * @param  {array} methodList List of methods from the derivedObj that will be wrapped
- * @param  {object} derivedObject Object that inherits from the baseObj
+ * @param  {object} derivedObj Object that inherits from the baseObj
  * @param  {object} baseObj Object that derivedObj inherits from
  * @return {undefined}
  */
@@ -127,7 +126,7 @@ function wrapMethods (targetObj, methodList, derivedObj, baseObj) {
  * in the derived one
  * @param  {object} obj Object that will contain the wrapped method
  * @param  {string} methodName The name of the method that will be wrapped
- * @param  {object} derivedObject Object that inherits from the baseObj
+ * @param  {object} derivedObj Object that inherits from the baseObj
  * @param  {object} baseObj Object that derivedObj inherits from
  * @return {undefined}
  */
