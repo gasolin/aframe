@@ -12,6 +12,7 @@
     "gh-pages": "npm run ghpages",
     "ghpages": "node ./scripts/gh-pages",
     "lint": "semistandard -v | snazzy",
+    "eslint": "eslint src/core/*.js",
     "precommit": "npm run lint",
     "preghpages": "npm run dist && rimraf gh-pages && mkdirp gh-pages && cp -r {.nojekyll,dist,lib,examples,index.html,style} gh-pages/. 2>/dev/null || : && git checkout dist/ && replace 'build/aframe.js' 'dist/aframe.min.js' gh-pages/ -r --silent",
     "release:bump": "npm run dist && git commit -am 'bump dist' && npm version patch --preminor",
@@ -67,7 +68,9 @@
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "snazzy": "^3.0.0",
-    "uglifyjs": "^2.4.10"
+    "uglifyjs": "^2.4.10",
+    "eslint-config-defaults": "^9.0.0",
+    "eslint": "^2.11.1"
   },
   "link": true,
   "browserify": {
